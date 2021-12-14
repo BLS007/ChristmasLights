@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!-- Linking the christmaslights.css page to apply styling effects. -->
+    <link rel="stylesheet" href="christmaslights.css">
+    
+    <body>
+
+        <!-- Represents each christmas light by color from left to right. -->
+        <div class="main">
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle blue"></div>
+            <div class="circle green"></div>
+        </div>
+        
+        <!-- Represents the font, buttons and additional controls for the lights. -->
+        <div class="utilities">
+            <div class="title">
+                <h1 id="title">Christmas Lights</h1>
+            </div>
+            <div class="buttons">
+                <button id="play">On</button>
+                <button id="stop">Off</button>
+                <label for="">Speed:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="From 1 until 5 only." value="">
+                <input type="submit" id="submit" name="" value="RUN" onclick="convert()">
+            </div>
+        </div>
+        
+        <!-- Linking the christmaslights.js page to apply the overall functionality of how the lights respond with the control options. -->
+        <script src="christmaslights.js" charset="utf-8"></script>  
+
+    </body>
+    
+</html>
