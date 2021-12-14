@@ -1,0 +1,230 @@
+/* Overall styling effects for the whole page. */
+* {
+  box-sizing: border-box;
+}
+
+/* Overall styling effects for the content within the "Body" of the code. */
+body {
+  background: #727272;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Styling effects for the utilities container. */
+.utilities {
+  width: 100vw;
+  padding: 1rem;
+  color: black;
+  font-family: 'Lato',sans-serif;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling effects for the "Christmnas Lights" title. */
+.title {
+  font-family: 'Cinzel', sans-serif;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align : center;
+  text-shadow: 0 0 30px green;
+}
+
+/* Styling effects for the "On" & "Off" Buttons. */
+.utilities button {
+  height: 50px;
+  width: 50px;
+  background: none;
+  color: black;
+  outline: none;
+  border: 2px solid green;
+  border-radius: 25px;
+  margin: 0 12px;
+}
+
+/* Styling effects for the "utilities" container */
+.utilities label {
+  padding: 10px;
+}
+
+/* Styling effects for the "From 1 until 5 only" within the text box. */
+.utilities #quantity {
+  width: 150px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  outline: none;
+  border: 2px solid green;
+  padding: 0 7px;
+}
+
+/* Styling effects for the "RUN" button. */
+.utilities #submit {
+  height: 50px;
+  border-top-right-radius:  10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid green;
+  background: none;
+  outline: none;
+  color: black;
+}
+
+/* Styling effects for the "On", "Off" and "RUN" buttons while hovering over them. */
+button:hover, #submit:hover, button:active, #submit:active {
+  outline: none;
+  background: red;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+/* Styling effects for the "main" container. */
+.main {
+  border-radius: 25px;
+  height: 30vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling effects for the christmas light bulbs. */
+.circle {
+  display: flex;
+  margin: 1rem;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  transition: 1s all ease;
+}
+
+/* Styling effects for the light fixtures. */
+.circle:before {
+  position: absolute;
+  content: '';
+  height: 15px;
+  width: 15px;
+  left: 17.5px;
+  top: -15px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background: black;
+  border-radius: 2px;
+  display: inline-block;
+  border-bottom: 2px solid rgb(97, 81, 107);
+}
+
+/* Styling effects for the cord(s) that runs through the light fixtures. */
+.circle:after {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 30px;
+  position: absolute;
+  width: 70px;
+  height: 18.6666666667px;
+  border-bottom: solid black 2px;
+  border-radius: 50%;
+}
+
+/* Styling effects that end the length of the cord. */
+.circle:last-child::after {
+  content: '';
+  position: absolute;
+  border: none;
+}
+
+/* Styling effects for the red light bulb. */
+.red {
+  background-color: #c0392b;
+  animation: glow-1 1s infinite;
+}
+
+/* Styling effects for the yellow light bulb. */
+.yellow {
+  background-color: #f1c40f;
+  animation: glow-2 1s infinite;
+}
+
+/* Styling effects for the blue light bulb. */
+.blue {
+  background-color: #64fcfe;
+  animation: glow-3 1s infinite;
+}
+
+/* Styling effects for the green light bulb. */
+.green {
+  background-color: #2ecc71;
+  animation: glow-4 1s infinite;
+}
+
+/* Styling effects that affect the glow for the red light bulb. */
+@keyframes glow-1 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #c0392b;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+/* Styling effects that affect the glow for the yellow light bulb. */
+@keyframes glow-2 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #f1c40f;
+  }
+}
+
+/* Styling effects that affect the glow for the blue light bulb. */
+@keyframes glow-3 {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 5px #74f7e1;
+  }
+  50% {
+    box-shadow: none;
+  }
+}
+
+/* Styling effects that affect the glow for the green light bulb. */
+@keyframes glow-4 {
+  0%,
+  100% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #2ecc71;
+  }
+}
+
+/* Styling effects that affect the  overall glow for all of the colors. */
+@-webkit-keyframes main-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #c0392b, 0 0 60px #c0392b, 0 0 70px #c0392b;
+  }
+  25% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #f1c40f, 0 0 40px #ff4da6, 0 0 50px #f1c40f, 0 0 60px #f1c40f, 0 0 70px #f1c40f, 0 0 80px #ff4da6;
+  }
+  50% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #74f7e1, 0 0 40px #74f7e1, 0 0 50px #74f7e1, 0 0 60px #74f7e1, 0 0 70px #74f7e1, 0 0 80px #74f7e1;
+  }
+  75% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #2ecc71, 0 0 40px #2ecc71, 0 0 50px #2ecc71, 0 0 60px #2ecc71, 0 0 70px #2ecc71, 0 0 80px #2ecc71;
+  }
+}
