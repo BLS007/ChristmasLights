@@ -1,5 +1,5 @@
 # Christmas Lights
-## A string of christmas lights with controls.
+## A single webpage that displays a string of christmas lights with clickable controls.
 
 ### Home Page
 
